@@ -120,6 +120,10 @@ body * {
 	font-weight: bold;
 }
 
+.reveal .small {
+    font-size: .6em !important;
+}
+
 .h1em {
 	height: 1em;
 }
@@ -140,3 +144,40 @@ body * {
 .vspace {
 	padding-top: 0.4em !important;
 }
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
