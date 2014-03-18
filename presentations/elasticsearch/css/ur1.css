@@ -1,0 +1,194 @@
+body .reveal * {
+
+    font-family: "News Cycle", Impact, sans-serif;
+}
+
+.row.stripe {
+    margin-bottom: 40px;
+}
+
+.stripe {
+    height: 5px;
+}
+
+.stripe.red {
+    background-color: #a61716;
+}
+
+.stripe.orange {
+    background-color: #ff9933;
+}
+
+.footer {
+	height: 1.5em;
+	position: fixed;
+    bottom: 0.6em;
+}
+
+.footer-left {
+	left: 0.3em;
+}
+
+.footer-right {
+    font-size: 16px!important;
+	right: 0.3em;
+}
+
+.reveal .footer img,
+.reveal .footer img {
+    background: none;
+    border: none;
+    box-shadow: none;
+	height: 2em;
+    margin-bottom: -0.5em;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-down {
+	display: none;
+}
+
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled,
+.reveal .controls div.navigate-left.enabled:hover {
+    border-right-color: #ff9933;
+
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled,
+.reveal .controls div.navigate-right.enabled:hover {
+    border-left-color: #ff9933;
+}
+
+.reveal .progress {
+	height: 0.3em;
+}
+
+.reveal .slides > section,
+.reveal .slides section > section {
+	padding-top: 150px !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.print-pdf .reveal .slides > section > section {
+	margin-top: -150px !important;
+}
+
+@media ( max-width : 767px) { 
+ 	.footer-left {
+		top: 0.3em;
+		bottom: auto;
+	}
+}
+
+.reveal .slides {
+	text-align: left;
+}
+
+.reveal .slide-number {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	z-index: 29;
+	right: 10px;
+	bottom: 10px;
+	color: #ff9933;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 1 !important;
+	display: inline-block;
+}
+
+.reveal .author {
+	color: #ff9933;
+	font-weight: bold;
+	margin-top: 200px;
+	text-align:right
+}
+
+.reveal .center {
+	text-align: center;
+}
+
+.reveal h1,
+.reveal .h1,
+.reveal h2,
+.reveal .h2 {
+	position: fixed;
+	display: block;
+	padding: 0.3em 0;
+	width: 100%;
+	top: 0px;
+}
+
+.reveal .focus {
+	color: #ff9933;
+	font-weight: bold;
+}
+
+.reveal .progress {
+	background: rgba(255, 102, 0, 0.1);
+}
+
+.reveal .progress span {
+	background: rgba(255, 102, 0, 0.8);
+}
+
+.reveal ul,
+.reveal ol {
+	list-style-position: inside;
+}
+
+.reveal ul li,.reveal ol li {
+	margin-bottom: 30px !important;
+}
+
+.reveal ul li.active,.reveal ol li.active {
+	color: #a61716;
+	font-weight: bold;
+}
+
+.reveal .small {
+    font-size: .6em !important;
+}
+
+.reveal .highlight-red {
+    color: #a61716;
+}
+
+.h1em {
+	height: 1em;
+}
+
+.iframeDiv {
+	border: 1px solid #bbb !important;
+}
+
+.iframeDiv iframe {
+	width: 100%;
+}
+
+.resizableHoriz {
+	resize: horizontal;
+	overflow: hidden;
+}
+
+.vspace {
+	padding-top: 0.4em !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+

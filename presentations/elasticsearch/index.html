@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Elasticsearch</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/ur1.css">
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <!-- Accueil -->
+                <section>
+                    <div class="h2 title">
+                        Elasticsearch
+                        <div>
+                            <small>Principes généraux - Introduction à ELK</small>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 stripe orange"></div>
+                            <div class="col-xs-6 stripe red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="author center">
+                            <small>Lionel  Le Vagueresse</small>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Sommaire -->
+                <section>
+                    <div class="h2 title">
+                        Sommaire
+                        <div><small></small></div>
+                        <div class="row stripe">
+                            <div class="col-xs-6 stripe orange"></div>
+                            <div class="col-xs-6 stripe red"></div>
+                        </div>
+                        <ol>
+                            <li class="fragment">Elasticsearch, qu'est-ce donc ?</li>
+                            <li class="fragment">Terminologie</li>
+                            <li class="fragment">Architecture</li>
+                            <li class="fragment">ELK</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Qu'est-ce que c'est -->
+                <section>
+                    <div class="h2 title">
+                        Elasticsearch
+                        <div>
+                            <small>
+                                Qu'est donc ?
+                            </small>
+                        </div>
+                        <div class="row stripe">
+                            <div class="col-xs-6 stripe orange"></div>
+                            <div class="col-xs-6 stripe red"></div>
+                        </div>
+                        <ul>
+                            <li class="fragment">Moteur d'indexation de données et de recherche basé sur Apache Lucène&copy;</li>
+                            <li class="fragment">Architecture distribuée</li>
+                            <li class="fragment">Approche documentaire JSON, sans schéma</li>
+                            <li class="fragment">Interface REST</li>
+                            <li class="fragment">Modulaire : sites, rivières, plugins divers...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Terminologie -->
+                <section>
+                    <div class="h2 title">
+                        Terminologie
+                        <div>
+                            <small>
+                                Un peu de vocabulaire
+                            </small>
+                        </div>
+                        <div class="row stripe">
+                            <div class="col-xs-6 stripe orange"></div>
+                            <div class="col-xs-6 stripe red"></div>
+                        </div>
+                        <ul>
+                            <li class="fragment">Shard : Plus petite unité de calcul. Correspond à une instance de Lucène.</li>
+                            <li class="fragment">Index : Ensemble de shards. C'est là que l'on insère les données.</li>
+                            <li class="fragment">Noeud : Ensemble d'index.</li>
+                            <li class="fragment">Cluster : ensemble de noeuds</li>
+                        </ul>
+                    </div>
+                </section>
+
+
+                <!-- Architecture -->
+                <section>
+                    <div class="h2 title">
+                        Architecture
+                        <div>
+                            <small></small>
+                        </div>
+                        <div class="row stripe">
+                            <div class="col-xs-6 stripe orange"></div>
+                            <div class="col-xs-6 stripe red"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <ul>
+                                    <li class="fragment">Architecture distribuée (horizontale) : répartition de charge + tolérance aux pannes</li>
+                                    <li class="fragment">Les noeuds peuvent être configurés pour ne pas porter de données et ainsi servir à la répartition de la charge.</li>
+                                    <li class="fragment">Plusieurs types de noeuds :
+                                        <ul>
+                                            <li class="fragment">Maître : 1 seul par cluster. Tous sont, par défaut, éligibles à ce poste mais un seul est choisi pour assuré ce rôle.</li>
+                                            <li class="fragment">Réplicat : Noeud qui contient les shards d'un noeud configuré pour être répliqué. Cf. figure 1</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-3">
+                                <figure class="fragment">
+                                    <img src="img/replication.png" />
+                                    <figcaption class="small">Figure 1: Réplication et shards</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+			</div>
+            <div class="footer footer-left">
+                <img src="img/ur1.png" />
+            </div>
+            <div class="footer footer-right">
+                DSI - Pôle SI – Équipe DEVeloppement et Qualité
+            </div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+            Reveal.initialize({
+                margin : 0,
+                controls : true,
+                progress : true,
+                center : true,
+                slideNumber : false,
+
+                transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+                dependencies : [
+                    // Cross-browser element.classList (esp needed on safari 4.0.5)
+                    {
+                        src : 'lib/js/classList.js',
+                        condition : function() {
+                            return !document.body.classList;
+                        }
+                    },
+
+                    // Syntax highlight for <code> elements
+                    {
+                        src : 'plugin/highlight/highlight.js',
+                        async : true,
+                        callback : function() {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    }
+
+                ]
+            });
+
+		</script>
+
+	</body>
+</html>
