@@ -3,20 +3,23 @@ body .reveal * {
     font-family: "News Cycle", Impact, sans-serif;
 }
 
-.row.stripe {
-    margin-bottom: 40px;
-}
+@media all {
+    .row.stripe {
+        height: 5px !important;
+        margin-bottom: 40px;
+    }
 
-.stripe {
-    height: 5px;
-}
+    .stripe {
+        height: 5px !important;
+    }
 
-.stripe.red {
-    background-color: #a61716;
-}
+    .stripe.red {
+        background-color: #a61716;
+    }
 
-.stripe.orange {
-    background-color: #ff9933;
+    .stripe.orange {
+        background-color: #ff9933;
+    }
 }
 
 .footer {
@@ -87,21 +90,6 @@ body .reveal * {
 	text-align: left;
 }
 
-.reveal .slide-number {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	z-index: 29;
-	right: 10px;
-	bottom: 10px;
-	color: #ff9933;
-	font-weight: bold;
-	display: inline-block;
-	vertical-align: middle;
-	opacity: 1 !important;
-	display: inline-block;
-}
-
 .reveal .author {
 	color: #ff9933;
 	font-weight: bold;
@@ -113,15 +101,15 @@ body .reveal * {
 	text-align: center;
 }
 
-.reveal h1,
+/*.reveal h1,*/
 .reveal .h1,
-.reveal h2,
+/*.reveal h2,*/
 .reveal .h2 {
-	position: fixed;
-	display: block;
-	padding: 0.3em 0;
-	width: 100%;
-	top: 0px;
+	/*position: fixed;*/
+	/*display: block;*/
+	/*padding: 0.3em 0;*/
+	/*width: 100%;*/
+	/*top: 0px;*/
 }
 
 .reveal .focus {
@@ -157,6 +145,12 @@ body .reveal * {
 
 .reveal .highlight-red {
     color: #a61716;
+}
+
+.reveal .borderless,
+.reveal .borderless img {
+    border: none;
+    box-shadow: none;
 }
 
 .h1em {
