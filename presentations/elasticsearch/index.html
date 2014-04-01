@@ -51,6 +51,9 @@
                         <p class="author center">
                             <small>Lionel  Le Vagueresse</small>
                         </p>
+                        <p class="center small">
+                            8 avril 2014
+                        </p>
                     </div>
                 </section>
 
@@ -87,11 +90,11 @@
                             <div class="col-xs-6 stripe red"></div>
                         </div>
                         <ul>
-                            <li>Moteur d'indexation de données et de recherche basé sur Apache Lucène&copy;</li>
-                            <li>Architecture distribuée</li>
-                            <li>Approche documentaire JSON, sans schéma</li>
-                            <li>Interface REST</li>
-                            <li>Modulaire : sites, rivières, plugins divers...</li>
+                            <li class="fragment">Moteur d'indexation de données et de recherche basé sur Apache Lucène</li>
+                            <li class="fragment">Architecture distribuée</li>
+                            <li class="fragment">Approche documentaire JSON, sans schéma</li>
+                            <li class="fragment">Interface REST</li>
+                            <li class="fragment">Modulaire : sites, rivières, plugins divers...</li>
                         </ul>
                     </div>
                 </section>
@@ -110,10 +113,10 @@
                             <div class="col-xs-6 stripe red"></div>
                         </div>
                         <ul>
-                            <li>Shard : Plus petite unité de traitement. Correspond à une instance de Lucène.</li>
-                            <li>Index : Ensemble de shards. C'est là que l'on insère les données.</li>
-                            <li>Noeud : Ensemble d'index.</li>
-                            <li>Cluster : Ensemble de noeuds.</li>
+                            <li class="fragment">Shard : Plus petite unité de traitement. Correspond à une instance de Lucène.</li>
+                            <li class="fragment">Index : Ensemble de shards. C'est là que l'on insère les données.</li>
+                            <li class="fragment">Noeud : Ensemble d'index.</li>
+                            <li class="fragment">Cluster : Ensemble de noeuds.</li>
                         </ul>
                     </div>
                 </section>
@@ -131,12 +134,12 @@
                             <div class="col-xs-6 stripe red"></div>
                         </div>
                         <ul>
-                            <li>Architecture distribuée (horizontale) : répartition de charge + tolérance aux pannes</li>
-                            <li>Les noeuds peuvent être configurés pour ne pas porter de données et ainsi servir à la répartition de la charge.</li>
-                            <li>Plusieurs types de noeuds :
+                            <li class="fragment">Architecture distribuée (horizontale) : répartition de charge + tolérance aux pannes</li>
+                            <li class="fragment">Les noeuds peuvent être configurés pour ne pas porter de données et ainsi servir à la répartition de la charge.</li>
+                            <li class="fragment">Plusieurs types de noeuds :
                                 <ul>
-                                    <li>Maître : 1 seul par cluster. Tous sont, par défaut, éligibles à ce poste mais un seul est choisi pour assuré ce rôle.</li>
-                                    <li>Réplicat : Noeud qui contient les shards d'un noeud configuré pour être répliqué.</li>
+                                    <li class="fragment">Maître : 1 seul par cluster. Tous sont, par défaut, éligibles à ce poste mais un seul est choisi pour assuré ce rôle.</li>
+                                    <li class="fragment">Réplicat : Noeud qui contient les shards d'un noeud configuré pour être répliqué.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -194,8 +197,8 @@
                             <div class="col-xs-6 stripe red"></div>
                         </div>
                         <ul>
-                            <li>Approche documentaire sans schéma -> pas de format, tout type de données</li>
-                            <li>
+                            <li class="fragment">Approche documentaire sans schéma -> pas de format, tout type de données</li>
+                            <li class="fragment">
                                 Comment alimente-t-on un index :
                                 <ul>
                                     <li class="fragment">En tirant : <span class="fragment">Rivières.
@@ -247,7 +250,28 @@
                             <div class="col-xs-6 stripe red"></div>
                         </div>
                     </div>
-                    Démo
+                    <div class="row">
+                        <div class="col-xs-6 fragment">
+                            Fichier de configuration
+                            <img src="img/logstash.png" class="borderless" />
+                            <br />
+                            Lancement : <code>./bin/logstash -f conf/logstash-apache.conf</code>
+                        </div>
+                        <div class="col-xs-6 fragment">
+                            Fonctionnement :
+                            <ul>
+                                <li class="fragment">
+                                    Entrée : Fichier, Syslog, Log4j, Sqlite, Unix, Imap, ...
+                                </li>
+                                <li class="fragment">
+                                    Sortie : Elasticsearch, Fichier, Stdout, Nagios, ...
+                                </li>
+                                <li class="fragment">
+                                    Filtres :Grok, GeoIP, Anonymize, Cipher, ...
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
                 <section>
                     <div class="h2 title">
@@ -290,6 +314,19 @@
                             <div class="col-xs-6 stripe orange"></div>
                             <div class="col-xs-6 stripe red"></div>
                         </div>
+                        <ul>
+                            <li>
+                                Outil d'indexation et de recherche :
+                                <ul>
+                                    <li>puissant</li>
+                                    <li>flexible</li>
+                                    <li>"scalable"</li>
+                                </ul>
+                            </li>
+                            <li>
+                                ELK : prêt à l'emploi, nombreux usages possibles
+                            </li>
+                        </ul>
                     </div>
                 </section>
 
